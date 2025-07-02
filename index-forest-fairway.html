@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Golf Tournament</title>
+  <style>
+    /* Forest & Fairway Color Palette */
+    :root {
+      --forest-green: #228B22;
+      --sandstone: #E6D5B8;
+      --sky-blue: #A7C7E7;
+      --bark-brown: #5C4033;
+      --cream: #FAF9F6;
+    }
+
+    /* Accordion Styles 
+.accordion-header {
+  background-color: #228B22;
+  color: #FAF9F6;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-header h3 {
+  margin: 0;
+}
+
+.accordion-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: #FAF9F6;
+  padding: 0 1rem;
+}
+
+.accordion-panel ul {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.accordion-panel li {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+   */
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--sandstone);
+      color: var(--bark-brown);
+    }
+
+    header {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .hero {
+      background-color: var(--sky-blue);
+      
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+        color: var(--cream);
+        
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero h3 {
+      color: var(--cream);
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+    .hero p {
+      color: var(--bark-brown);
+      font-size: 1.65rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #1a6b1a;
+    }
+
+    .content {
+
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      max-width: 700px;
+      margin: 0 auto;
+      
+    }
+
+    footer {
+      background-color: var(--bark-brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+     padding: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+     padding: 2rem;
+  }
+}
+
+.team-card {
+  background-color: #F5F0E1;
+  border: 2px solid #2C5F2D;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 901px){
+    .team-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 1.5rem;
+     padding: 2rem;
+    }
+}
+.team-card {
+  background-color: #F5F0E1;
+  border: 2px solid #2C5F2D;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-card h3 {
+  margin-top: 0;
+  color: #2C5F2D;
+}
+
+.team-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.team-card li {
+  margin-bottom: 0.25rem;
+  font-size: 1.85rem;
+  padding-left: 1.5rem;
+}
+
+.tee-time{
+  font-weight: bold;
+  color: #D4AF37;
+  font-size: 1.5rem;
+}
+
+.team-card li::before {
+       content: "★";
+      list-style: none;
+      margin-right: 0.75rem;
+      color: #D4AF37; 
+      
+
+    }
+
+    .team-card li {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.25rem;
+      padding-left: 0;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Forest & Fairway Charity Scramble</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Play for a Purpose</h2>
+    <p>Thank you and welcome to the Forest & Fairway Charity Scramble.
+We’re thrilled to have you join us for a meaningful day of golf, generosity, and community spirit.
+Every swing you take helps support the Windsor Food Bank and brings real relief to those in need.
+</p>
+    <a href="registrationpage.html" class="cta-button">Register Now</a>
+    <br>
+    <br>
+    <h3>About the Event</h3>
+  <p><strong>📅 Date:</strong> Saturday, July 26th, 2025<br>
+     <strong>⏰ Tee Times Begin:</strong> 10:00 AM (every 10 minutes)<br>
+     <strong>📝 Registration Deadline:</strong> Friday, July 18th at midnight
+  </p>
+
+  <p><strong>🏌️ Format:</strong> Scramble Best Ball<br>
+     <strong>💰 Entry Fee:</strong> $60 per player + a required donation<br>
+     <strong>🎯 Contests:</strong> Longest Drive, Closest to the Pin, and Lowest Team Score
+  </p>
+
+  <p><strong>🎟️ Raffle Tickets:</strong><br>
+     $1 for 1 ticket<br>
+     $5 for 7 tickets<br>
+     $10 for 15 tickets
+  </p>
+
+  <p><strong>🔁 Optional Re-Hits:</strong> $10 per re-hit (1 player per team may participate)<br>
+     <em>(This rule is subject to change)</em>
+  </p>
+
+  <p><strong>💳 Payment Instructions:</strong><br>
+     To complete your registration, please e-transfer your golf fee to <strong>forestfairwaygolf@gmail.com</strong> by July 18th.<br>
+     Donations may be included in the e-transfer or brought on the day of the event.
+  </p>
+
+  <p><strong>🎯 All proceeds go to the Windsor Food Bank to support families in need.</strong></p>
+
+  <a href="registration.html" class="cta-button">Register Your Team</a>
+
+
+  </section>
+  <section class="content">
+    
+    <section class="team-grid">
+  <div class="team-card">
+    <button class="accordion-header">
+      <h3>Team Eagles</h3>
+      <p class="tee-time">Tee Time: 9:30 AM</p>
+    </button>
+    <div class="accordion-panel">
+      <ul>
+        <li>Player 1</li>
+        <li>Player 2</li>
+        <li>Player 3</li>
+        <li>Player 4</li>
+      </ul>
+    </div>
+  </div>
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Birdies</h3>
+        <p class="tee-time">Tee Time: 10:00 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player A</li>
+            <li>Player B</li>
+            <li>Player C</li>
+            <li>Player D</li>
+        </ul>
+        </div>
+    </div>
+    <div class="team-card">     
+        <button class="accordion-header">
+        <h3>Team Pars</h3>
+        <p class="tee-time">Tee Time: 10:30 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player X</li>
+            <li>Player Y</li>
+            <li>Player Z</li>
+            <li>Player W</li>
+        </ul>
+        </div>  
+    </div>
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Bogeys</h3>
+        <p class="tee-time">Tee Time: 11:00 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player A</li>
+            <li>Player B</li>
+            <li>Player C</li>
+            <li>Player D</li>       
+
+        </ul>
+        </div>  
+    </div>
+
+  <!-- Repeat for other teams -->
+
+
+
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Fairways</h3>
+        <p class="tee-time">Tee Time: 11:30 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="team-card">
+    <button class="accordion-header">
+      <h3>Team Greens</h3>
+      <p class="tee-time">Tee Time: 9:30 AM</p>
+    </button>
+    <div class="accordion-panel">
+      <ul>
+        <li>Player 1</li>
+        <li>Player 2</li>
+        <li>Player 3</li>
+        <li>Player 4</li>
+      </ul>
+    </div>
+  </div>
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Bunkers</h3>
+        <p class="tee-time">Tee Time: 10:00 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player A</li>
+            <li>Player B</li>
+            <li>Player C</li>
+            <li>Player D</li>
+        </ul>
+        </div>
+    </div>
+    <div class="team-card">     
+        <button class="accordion-header">
+        <h3>Team Water Hazard</h3>
+        <p class="tee-time">Tee Time: 10:30 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player X</li>
+            <li>Player Y</li>
+            <li>Player Z</li>
+            <li>Player W</li>
+        </ul>
+        </div>  
+    </div>
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Fade</h3>
+        <p class="tee-time">Tee Time: 11:00 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player A</li>
+            <li>Player B</li>
+            <li>Player C</li>
+            <li>Player D</li>       
+
+        </ul>
+        </div>  
+    </div>
+
+  <!-- Repeat for other teams -->
+
+
+
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Draw</h3>
+        <p class="tee-time">Tee Time: 11:30 AM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Champions</h3>
+        <p class="tee-time">Tee Time: 12:00 PM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="team-card">
+        <button class="accordion-header">
+        <h3>Team Legends</h3>
+        <p class="tee-time">Tee Time: 12:30 PM</p>
+        </button>
+        <div class="accordion-panel">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+        </div>
+    </div>
+  <!-- Add more team cards as needed -->
+   
+</section>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Forest & Fairway Golf Tournament. All rights reserved.
+  </footer>
+
+</body>
+</html>

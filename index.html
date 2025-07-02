@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charity Golf Tournament</title>
+  <style>
+    /* Color Palette */
+    :root {
+      --pine-green: #2C5F2D;
+      --beige: #F5F0E1;
+      --gold: #D4AF37;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--beige);
+      color: var(--charcoal);
+    }
+
+    header {
+      background-color: var(--pine-green);
+      color: var(--white);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .hero {
+      background-color: var(--gold);
+      color: var(--charcoal);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-button {
+      background-color: var(--pine-green);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .cta-button:hover {
+      background-color: #1e3f1e;
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .team-teetime {
+      background-color: #1e3f1e;
+      border: 1px solid var(--charcoal);
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: 300px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .team-teetime h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--pine-green);
+    }
+    .team-teetime h4 {
+      font-size: 1.2rem;
+      color: var(--charcoal);
+    }
+
+    .team-teetime li::marker {
+      content: "🏌️";
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+    }
+
+    .team-teetime li {
+      list-style: none;
+      padding: 0;
+      margin-bottom: .5rem;
+    }
+
+    #m1 , li::marker {
+      background-color: var(--beige);
+      border-radius: 10px;
+
+    }
+    #m2 {
+      background-color: var(--beige);
+      border-radius: 10px;
+    }
+    #m3 {
+      background-color: var(--beige);
+      border-radius: 10px;
+    }
+    #m4 {
+      background-color: var(--beige);
+      border-radius: 10px;
+    }
+    
+
+    footer {
+      background-color: var(--charcoal);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Charity Golf Tournament</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Join Us for a Day on the Green</h2>
+    <p>Support a great cause while enjoying a round of golf, great food, and community spirit. All proceeds go to local youth programs.</p>
+    <a href="#" class="cta-button">Register Now</a>
+
+    <h3>About the Event</h3>
+    <p>
+      Our annual charity golf tournament brings together players of all skill levels to raise funds for youth development initiatives. Whether you're a seasoned golfer or just here for the fun, there's something for everyone.
+    </p>
+
+  </section>
+  <section class="content">
+    <section class="team-grid">
+      <div class="team-teetime" id="team1">  
+        <h3>Team 1</h3>
+        <h4>Tee Time: 10:00 am</h4>
+        <ul>
+          <li id="m1">John Doe - Captain</li>
+          <li id="m2">Jane Smith</li>
+          <li id="m3">Mike Johnson</li>
+          <li id="m4">Emily Davis</li>
+        </ul>
+      </div>
+    
+    </section>
+  </section>
+
+  <footer>
+    &copy; 2025 Charity Golf Tournament. All rights reserved.
+  </footer>
+
+</body>
+</html>

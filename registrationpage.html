@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register Your Team</title>
+  <style>
+    /* Forest & Fairway Color Palette */
+    :root {
+      --forest-green: #228B22;
+      --sandstone: #E6D5B8;
+      --sky-blue: #A7C7E7;
+      --bark-brown: #5C4033;
+      --cream: #FAF9F6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--sandstone);
+      color: var(--bark-brown);
+    }
+
+    header {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: var(--cream);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--forest-green);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    input, select, textarea {
+      padding: 0.75rem;
+      border: 1px solid var(--bark-brown);
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: var(--sandstone);
+      color: var(--bark-brown);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--forest-green);
+    }
+
+    .submit-button {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      border: none;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #1a6b1a;
+    }
+
+    footer {
+      background-color: var(--bark-brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+    <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const tee1 = document.getElementById("tee-time-1").value;
+    const tee2 = document.getElementById("tee-time-2").value;
+    const tee3 = document.getElementById("tee-time-3").value;
+
+    const teeTimes = [tee1, tee2, tee3];
+    const uniqueTimes = new Set(teeTimes.filter(time => time !== ""));
+
+    if (uniqueTimes.size < teeTimes.filter(time => time !== "").length) {
+      e.preventDefault();
+      document.getElementById("tee-error").style.display = "block";
+    } else {
+      document.getElementById("tee-error").style.display = "none";
+    }
+  });
+</script>
+
+  <header>
+    <h1>Register Your Team</h1>
+  </header>
+
+  <div class="form-container" action="https://formsubmit.co/7eead7ee1bd6850cd744a26704324f91" method="POST">
+                <input type="hidden" name="_subject" value="New Submission!">
+                <input type="hidden" name="_next" value="https://zay1r.github.io/isaiahwarner.github.io/thankyoupage.html">
+                <input type="hidden" name="_captcha" value="false">
+    <h2>Team Registration Form</h2>
+    <form action="#" method="POST">
+      <label for="team-name">Team Name</label>
+      <input type="text" id="team-name" name="team-name" required />
+
+      <label for="player-names">Player Names (one per line)</label>
+      <textarea id="player-names" name="player-names" rows="4" required></textarea>
+
+      <label for="tee-time" id="TeeT-1">Preferred Tee Time 1</label>
+      <select id="tee-time" name="tee-time" required>
+        <option value="">-- Select a Tee Time --</option>
+        <option>9:00 AM</option>
+        <option>9:30 AM</option>
+        <option>10:00 AM</option>
+        <option>10:30 AM</option>
+        <option>11:00 AM</option>
+      </select>
+
+      <label for="tee-time" id="TeeT-2">Preferred Tee Time 2</label>
+      <select id="tee-time" name="tee-time" required>
+        <option value="">-- Select a Tee Time --</option>
+        <option>9:00 AM</option>
+        <option>9:30 AM</option>
+        <option>10:00 AM</option>
+        <option>10:30 AM</option>
+        <option>11:00 AM</option>
+      </select>
+
+      <label for="tee-time" id="TeeT-3">Preferred Tee Time 3</label>
+      <select id="tee-time" name="tee-time" required>
+        <option value="">-- Select a Tee Time --</option>
+        <option>9:00 AM</option>
+        <option>9:30 AM</option>
+        <option>10:00 AM</option>
+        <option>10:30 AM</option>
+        <option>11:00 AM</option>
+      </select>
+
+      <label for="contact-email">Contact Email</label>
+      <input type="email" id="contact-email" name="contact-email" required />
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="3"></textarea>
+
+      <button type="submit" class="submit-button">Submit Registration</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Forest & Fairway Golf Tournament
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You – Forest & Fairway</title>
+  <style>
+    /* Forest & Fairway Color Palette */
+    :root {
+      --forest-green: #228B22;
+      --sandstone: #E6D5B8;
+      --sky-blue: #A7C7E7;
+      --bark-brown: #5C4033;
+      --cream: #FAF9F6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--sandstone);
+      color: var(--bark-brown);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .thank-you-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .thank-you-container h2 {
+      font-size: 2.2rem;
+      color: var(--forest-green);
+      margin-bottom: 1rem;
+    }
+
+    .thank-you-container p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .back-button {
+      background-color: var(--forest-green);
+      color: var(--cream);
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #1a6b1a;
+    }
+
+    footer {
+      background-color: var(--bark-brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Forest & Fairway</h1>
+  </header>
+
+  <div class="thank-you-container">
+    <h2>Thank You for Registering!</h2>
+    <p>Your team has been successfully registered for the Forest & Fairway Charity Golf Tournament. We’ll be in touch with event details and tee time confirmations soon.</p>
+    <a href="index-forest-fairway.html" class="back-button">Return to Home</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Forest & Fairway Golf Tournament
+  </footer>
+
+</body>
+</html>
