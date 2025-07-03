@@ -107,6 +107,30 @@
     .home-button:hover {
       background-color: #1a6b1a;
     }
+    /* House emoji \1F3E0 or \2302*/
+    @media (max-width: 600px) {
+      .home-button {
+        width:35px;
+        height:35px;
+        border-radius: 50%;
+        position: fixed;
+        background-color: rgba(33, 21, 3, 0.8);
+        background-color: transparent;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        
+}
+
+      .home-button::before {
+        content: '\1F3E0';
+        font-size: 30px;
+        color: var(--cream);
+      }
+
+      .home-button .label {
+      display: none;
+      
+    }
+    }
 
     footer {
       background-color: var(--bark-brown);
@@ -139,7 +163,9 @@
 
   <header>
     <h1>Register Your Team</h1>
-    <a href="index-forest-fairway.html" class="home-button">Back To HomePage</a>
+    <a href="index-forest-fairway.html" class="home-button">
+        <span class="label">Back To HomePage</span>
+    </a>
   </header>
 
   <form class="form-container" action="https://formsubmit.co/7eead7ee1bd6850cd744a26704324f91" method="POST">
