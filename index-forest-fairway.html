@@ -112,6 +112,33 @@
       background-color: #1a6b1a;
     }
 
+    #preview_inline_popup_button {
+      background-color: var(--bark-brown);
+      color: var(--cream);
+      position: absolute;
+      right: 20px; /* Adjust as needed */
+      top: 20px;   /* Optional: adjust vertical position */
+      text-decoration: none;
+      font-family: Verdana, sans-serif;
+      display: flex;
+      gap: 8px;
+      width: fit-content;
+      font-size: 16px;
+      border-radius: 5px;
+      line-height: 24px;
+      padding: 8px 24px;
+      font-size: 20px;
+     padding: 12px 32px;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease;
+}
+
+    #preview_inline_popup_button:hover {
+      transform: scale(1.05);
+      background-color: #D4AF37;
+    }
+
     .content {
 
       padding: 2rem;
@@ -153,7 +180,40 @@
     gap: 1.5rem;
      padding: 2rem;
   }
+  .accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .accordion-header {
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-header::after {
+    content: '\002B'; /* Plus sign */
+    font-weight: bold;
+    color: #777;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .accordion-header.active::after {
+    content: '\2212'; /* Minus sign */
+  }
 }
+
+
 
 .team-card {
   background-color: #F5F0E1;
@@ -229,10 +289,14 @@
 
   <header>
     <h1>Forest & Fairway Charity Scramble</h1>
+    <script type="text/javascript" defer="" src="https://donorbox.org/install-popup-button.js" id="donorbox-popup-button-installer">    
+    </script>
+    <a class="dbox-donation-button" id="preview_inline_popup_button" href="https://donorbox.org/forest-and-fairways?">
+    <img src="https://donorbox.org/images/white_logo.svg" style="display: none;">Donate Here</a>
   </header>
 
   <section class="hero">
-    <h2>Play for a Purpose</h2>
+    <h2>Swing for a Cause</h2>
     <p>Thank you and welcome to the Forest & Fairway Charity Scramble.
 We’re thrilled to have you join us for a meaningful day of golf, generosity, and community spirit.
 Every swing you take helps support the Windsor Food Bank and brings real relief to those in need.
@@ -278,7 +342,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
   <div class="team-card">
     <button class="accordion-header">
       <h3>Team Eagles</h3>
-      <p class="tee-time">Tee Time: 9:30 AM</p>
+      <p class="tee-time">Tee Time: 10:00 AM</p>
     </button>
     <div class="accordion-panel">
       <ul>
@@ -292,7 +356,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Birdies</h3>
-        <p class="tee-time">Tee Time: 10:00 AM</p>
+        <p class="tee-time">Tee Time: 10:09 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -306,7 +370,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">     
         <button class="accordion-header">
         <h3>Team Pars</h3>
-        <p class="tee-time">Tee Time: 10:30 AM</p>
+        <p class="tee-time">Tee Time: 10:18 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -320,7 +384,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Bogeys</h3>
-        <p class="tee-time">Tee Time: 11:00 AM</p>
+        <p class="tee-time">Tee Time: 10:27 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -340,7 +404,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Fairways</h3>
-        <p class="tee-time">Tee Time: 11:30 AM</p>
+        <p class="tee-time">Tee Time: 10:36 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -355,7 +419,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
     <button class="accordion-header">
       <h3>Team Greens</h3>
-      <p class="tee-time">Tee Time: 9:30 AM</p>
+      <p class="tee-time">Tee Time: 10:45 AM</p>
     </button>
     <div class="accordion-panel">
       <ul>
@@ -369,7 +433,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Bunkers</h3>
-        <p class="tee-time">Tee Time: 10:00 AM</p>
+        <p class="tee-time">Tee Time: 10:54 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -383,7 +447,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">     
         <button class="accordion-header">
         <h3>Team Water Hazard</h3>
-        <p class="tee-time">Tee Time: 10:30 AM</p>
+        <p class="tee-time">Tee Time: 11:03 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -397,7 +461,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Fade</h3>
-        <p class="tee-time">Tee Time: 11:00 AM</p>
+        <p class="tee-time">Tee Time: 11:12 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -417,7 +481,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Draw</h3>
-        <p class="tee-time">Tee Time: 11:30 AM</p>
+        <p class="tee-time">Tee Time: 11:21 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -432,7 +496,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Champions</h3>
-        <p class="tee-time">Tee Time: 12:00 PM</p>
+        <p class="tee-time">Tee Time: 11:30 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -447,7 +511,7 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Legends</h3>
-        <p class="tee-time">Tee Time: 12:30 PM</p>
+        <p class="tee-time">Tee Time: 11:39 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -467,6 +531,47 @@ Every swing you take helps support the Windsor Food Bank and brings real relief 
   <footer>
     &copy; 2025 Forest & Fairway Golf Tournament. All rights reserved.
   </footer>
+
+<script>
+  function setupAccordion() {
+    const isMobile = window.innerWidth <= 600;
+    const headers = document.querySelectorAll(".accordion-header");
+
+    headers.forEach(header => {
+      const panel = header.nextElementSibling;
+
+      // Remove any previous event listeners
+      const newHeader = header.cloneNode(true);
+      header.parentNode.replaceChild(newHeader, header);
+
+      if (isMobile) {
+        newHeader.addEventListener("click", function () {
+          const isActive = this.classList.contains("active");
+
+          // Close all panels
+          document.querySelectorAll(".accordion-header").forEach(h => {
+            h.classList.remove("active");
+            h.nextElementSibling.style.maxHeight = null;
+          });
+
+          // Toggle current panel
+          if (!isActive) {
+            this.classList.add("active");
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      } else {
+        // Ensure panels are always open on larger screens
+        panel.style.maxHeight = "none";
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", setupAccordion);
+  window.addEventListener("resize", setupAccordion);
+</script>
+
+
 
 </body>
 </html>
