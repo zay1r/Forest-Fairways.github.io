@@ -71,18 +71,64 @@
       font-size: 3rem;
     }
 
-    .hero {
+    .hero2 {
       background-color: var(--sky-blue);
       
       padding: 3rem 2rem;
       text-align: center;
     }
 
-    .hero h2 {
-        color: var(--cream);
+    .hero2 h2 {
+        color: var(--sandstone);
         
       font-size: 3rem;
       margin-bottom: 1rem;
+    }
+    .hero2 h3 {
+      color: var(--cream);
+      font-size: 2rem;
+      margin-top: 1rem;
+      margin-bottom:0;
+    }
+    .hero2 p {
+      color: var(--bark-brown);
+      font-size: 1.65rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .long-hr {
+      border: 0;
+      height: 3.5px;
+      background-color: #D4AF37;
+      width: 25%;
+      margin: 1rem auto;
+      margin-top: 0.5rem;
+    }
+
+    .short-hr{
+      border: 0;
+      height: 3.5px;
+      background-color: #D4AF37;
+      width: 18%;
+      margin: 1rem auto;
+      margin-top: 0.5rem;
+    }
+
+
+    .hero {
+      background-color: var(--cream);
+      
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero-header h2 {
+        color: var(--forest-green);
+        
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
     }
     .hero h3 {
       color: var(--cream);
@@ -94,6 +140,44 @@
       font-size: 1.65rem;
       max-width: 800px;
       margin: 0 auto 2rem;
+    }
+
+    .hero-header hr {
+      border: 0;
+      height: 3.5px;
+      background-color: #D4AF37;
+      width: 18%;
+      margin: 1rem auto;
+      margin-top:0;
+    }
+
+    .hero {
+      background-color: var(--cream);
+      
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .content h2 {
+        color: var(--bark-brown);
+        
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .content h3 {
+      color: var(--cream);
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .content hr {
+      border: 0;
+      height: 3.5px;
+      background-color: #D4AF37;
+      width: 18%;
+      margin: 1rem auto;
+      margin-top:0;
     }
 
     .cta-button {
@@ -208,6 +292,20 @@
   .content-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-header hr {
+      width: 45%;
+    }
+
+    .long-hr {
+      width: 30%;
+    }
+    .short-hr {
+      width: 20%;
+    }
+    .content hr {
+      width: 45%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -217,6 +315,21 @@
     html{
         overflow-x: hidden;
     }
+
+.hero-header hr {
+      width: 55%;
+    }
+
+    .long-hr {
+      width: 40%;
+    }
+    .short-hr {
+      width: 25%;
+    }
+    .content hr {
+      width: 65%;
+    }
+
   .team-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -274,8 +387,6 @@
   .content-grid {
     grid-template-columns: 1fr;
   }
-
-
   
 }
 
@@ -362,7 +473,10 @@
   </header>
 
   <section class="hero">
+    <div class="hero-header">
     <h2>Swing for a Cause</h2>
+    <hr>
+    </div>
     <p>Thank you and welcome to the Forest & Fairway Charity Scramble.
     We’re thrilled to have you join us for a meaningful day of golf, generosity, and community spirit.
     Every swing you take helps support the Windsor Food Bank and brings real relief to those in need.
@@ -370,17 +484,22 @@
     <!-- <a href="registrationpage.html" class="cta-button">Register Now</a> -->
     <br>
     <br>
+    </section>
+    <section class="hero2">
     <div class="content-grid">
       <div class="content-1">
         <h3>Event Details</h3>
+        <hr class="short-hr">
         <p><strong>📅 Date:</strong> Saturday, September 27th, 2025<br>
         <strong>⛳️ Course:</strong> Belleview Golf Club 436 Belle River Rd<br>  
         <strong>⏰ Tee Times Begin:</strong> 10:48 AM (every 9 minutes)<br>
         <strong>📝 Registration Deadline:</strong> Monday September, 15th at midnight
+        <strong>🏌️ Driving Range and Putting Green:</strong> 290 Yard Driving Range and 12,000 Sqft Putting Green
         </p>
       </div>
       <div class="content-2">
         <h3>Tournament Details</h3>
+        <hr class="long-hr">
         <p>
           <strong>🏌️ Format:</strong> Scramble Best Ball<br>
           <strong>💰 Entry Fee:</strong> $90 per player or $360 per team (4 players) Covers 18 holes of golf, donation, cart, hotdog, and beverage<br>
@@ -390,6 +509,7 @@
 </div>
       <div class="content-3">
         <h3>Additional Information</h3>
+        <hr class="long-hr">
         <p>
         <strong>🏆 Prizes:</strong> For the winners of Longest Driver, Closets to the Pin and Lowest Team score<br>
         <strong>🎟️ Raffle:</strong>On the day of the tournament, support our fundraiser by entering our Mystery Loot Raffle! Each ticket gives you a chance to win an exclusive loot packages packed with surprise goodies, and premium items, all for a great cause <br>
@@ -403,9 +523,9 @@
         </p>
 </div>
 <div class="content-4">
-   
 
   <h3>Registration</h3>
+  <hr class="short-hr">
   <p>
     
     <strong>Team Registration</strong><br>
@@ -421,7 +541,7 @@
 </div>
 
 </div>
-
+  </div>
   <p><strong> All proceeds go to the Windsor Food Bank to support families in need.</strong></p><br>
 
   <div class="Registration-button">
@@ -434,6 +554,9 @@
 
   </section>
   <section class="content">
+
+    <h2>Teams and Tee Times</h2>
+    <hr>
     
     <section class="team-grid">
   <div class="team-card">
