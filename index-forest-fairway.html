@@ -324,7 +324,7 @@
       width: 40%;
     }
     .short-hr {
-      width: 25%;
+      width: 35%;
     }
     .content hr {
       width: 65%;
@@ -374,7 +374,71 @@
   .accordion-header.active::after {
     content: '\2212'; /* Minus sign */
   }
-  #preview_inline_popup_button {
+
+.team-card {
+  background-color: #F5F0E1;
+  border: 2px solid #2C5F2D;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.content-accordion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .accordion-header2 {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--bark-brown);
+    border: none;
+    
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-header2:hover{
+    background-color: #1a6b1a;
+  }
+
+  .accordion-header2::after {
+    content: '\002B'; /* Plus sign */
+    font-weight: bold;
+    color: #D4AF37;
+    font-size: larger;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    top: 0.5rem;         /* Move it closer to the top */
+    right: 0.5rem;       /* Adjust horizontal spacing */
+    transform: none;     /* Remove vertical centering */
+    /*font-size: 1.2rem;    Optional: adjust size for clarity */
+
+  }
+  .accordion-header2 h3 {
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .accordion-header2.active::after {
+    content: '\2212'; /* Minus sign */
+  }
+
+.team-card2 {
+  background-color: #F5F0E1;
+  border: 3.5px solid #2C5F2D;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#preview_inline_popup_button {
     position: static; /* Removes absolute positioning */
     margin: 16px auto; /* Centers the button horizontally */
     display: block; /* Ensures it takes up its own line */
@@ -387,17 +451,7 @@
   .content-grid {
     grid-template-columns: 1fr;
   }
-  
-}
 
-
-
-.team-card {
-  background-color: #F5F0E1;
-  border: 2px solid #2C5F2D;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 @media (min-width: 901px){
@@ -487,7 +541,7 @@
     </section>
     <section class="hero2">
     <div class="content-grid">
-      <div class="content-1">
+      <!-- <div class="content-1">
         <h3>Event Details</h3>
         <hr class="short-hr">
         <p><strong>📅 Date:</strong> Saturday, September 27th, 2025<br>
@@ -496,9 +550,46 @@
         <strong>📝 Registration Deadline:</strong> Monday September, 15th at midnight
         <strong>🏌️ Driving Range and Putting Green:</strong> 290 Yard Driving Range and 12,000 Sqft Putting Green
         </p>
-      </div>
-      <div class="content-2">
-        <h3>Tournament Details</h3>
+      </div> -->
+
+      <!-- <div class="team-card">
+    <button class="accordion-header">
+      <h3>Team Eagles</h3>
+      <p class="tee-time">Tee Time: 10:00 AM</p>
+    </button>
+    <div class="accordion-panel">
+      <ul>
+        <li>Player 1</li>
+        <li>Player 2</li>
+        <li>Player 3</li>
+        <li>Player 4</li>
+      </ul>
+    </div>
+  </div> -->
+
+      <div class="team-card2">
+  <div class="accordion-header2">
+    <h3>Event Details</h3>
+  </div>
+  <div class="content-1 content-accordion">
+    
+    <hr class="short-hr">
+    <p>
+      <strong>📅 Date:</strong> Saturday, September 27th, 2025<br>
+      <strong>⛳️ Course:</strong> Belleview Golf Club 436 Belle River Rd<br>
+      <strong>⏰ Tee Times Begin:</strong> 10:48 AM (every 9 minutes)<br>
+      <strong>📝 Registration Deadline:</strong> Monday September, 15th at midnight<br>
+      <strong>🏌️ Driving Range and Putting Green:</strong> 290 Yard Driving Range and 12,000 Sqft Putting Green
+    </p>
+  </div>
+</div>
+
+
+        <div class="team-card2">
+  <div class="accordion-header2">
+    <h3>Tournament Details</h3>
+  </div>
+  <div class="content-2 content-accordion">
         <hr class="long-hr">
         <p>
           <strong>🏌️ Format:</strong> Scramble Best Ball<br>
@@ -507,8 +598,12 @@
           <strong>🎯 Contests:</strong> Longest Drive, Closest to the Pin, and Lowest Team Score
   </p>
 </div>
-      <div class="content-3">
-        <h3>Additional Information</h3>
+</div>
+        <div class="team-card2">
+  <div class="accordion-header2">
+    <h3>Additional Information</h3>
+  </div>
+  <div class="content-3 content-accordion">
         <hr class="long-hr">
         <p>
         <strong>🏆 Prizes:</strong> For the winners of Longest Driver, Closets to the Pin and Lowest Team score<br>
@@ -522,9 +617,14 @@
     To register, click the button below and fill out the registration form. 
         </p>
 </div>
-<div class="content-4">
+</div>
 
-  <h3>Registration</h3>
+
+  <div class="team-card2">
+  <div class="accordion-header2">
+    <h3>Registration</h3>
+  </div>
+  <div class="content-4 content-accordion">
   <hr class="short-hr">
   <p>
     
@@ -534,14 +634,12 @@
     Tee time are offered based on a first come first serve basis, so register early to get the time you want<br>
     <strong>Note:</strong> If you are registering as an individual, please select the "Individual Player" option in the team selection dropdown. We will assign you to a team based on availability.<br>
     <strong>Note:</strong> If you are registering as a team, please ensure all team members are registered under the same team name to avoid confusion.<br>
-    <br>
-
-  
+    <br> 
 </p>
 </div>
-
 </div>
-  </div>
+    </div>
+    <br>
   <p><strong> All proceeds go to the Windsor Food Bank to support families in need.</strong></p><br>
 
   <div class="Registration-button">
@@ -562,7 +660,7 @@
   <div class="team-card">
     <button class="accordion-header">
       <h3>Team Eagles</h3>
-      <p class="tee-time">Tee Time: 10:00 AM</p>
+      <p class="tee-time">Tee Time: 10:48 AM</p>
     </button>
     <div class="accordion-panel">
       <ul>
@@ -576,7 +674,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Birdies</h3>
-        <p class="tee-time">Tee Time: 10:09 AM</p>
+        <p class="tee-time">Tee Time: 10:59 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -590,7 +688,7 @@
     <div class="team-card">     
         <button class="accordion-header">
         <h3>Team Pars</h3>
-        <p class="tee-time">Tee Time: 10:18 AM</p>
+        <p class="tee-time">Tee Time: 11:10 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -604,7 +702,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Bogeys</h3>
-        <p class="tee-time">Tee Time: 10:27 AM</p>
+        <p class="tee-time">Tee Time: 11:21 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -624,7 +722,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Fairways</h3>
-        <p class="tee-time">Tee Time: 10:36 AM</p>
+        <p class="tee-time">Tee Time: 11:32 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -639,7 +737,7 @@
     <div class="team-card">
     <button class="accordion-header">
       <h3>Team Greens</h3>
-      <p class="tee-time">Tee Time: 10:45 AM</p>
+      <p class="tee-time">Tee Time: 11:43 AM</p>
     </button>
     <div class="accordion-panel">
       <ul>
@@ -653,7 +751,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Bunkers</h3>
-        <p class="tee-time">Tee Time: 10:54 AM</p>
+        <p class="tee-time">Tee Time: 11:54 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -667,7 +765,7 @@
     <div class="team-card">     
         <button class="accordion-header">
         <h3>Team Water Hazard</h3>
-        <p class="tee-time">Tee Time: 11:03 AM</p>
+        <p class="tee-time">Tee Time: 12:05 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -681,7 +779,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Fade</h3>
-        <p class="tee-time">Tee Time: 11:12 AM</p>
+        <p class="tee-time">Tee Time: 12:16 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -701,7 +799,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Draw</h3>
-        <p class="tee-time">Tee Time: 11:21 AM</p>
+        <p class="tee-time">Tee Time: 12:27 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -716,7 +814,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Champions</h3>
-        <p class="tee-time">Tee Time: 11:30 AM</p>
+        <p class="tee-time">Tee Time: 12:38 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -731,7 +829,7 @@
     <div class="team-card">
         <button class="accordion-header">
         <h3>Team Legends</h3>
-        <p class="tee-time">Tee Time: 11:39 AM</p>
+        <p class="tee-time">Tee Time: 12:49 AM</p>
         </button>
         <div class="accordion-panel">
         <ul>
@@ -759,7 +857,7 @@
     headers.forEach(header => {
       const panel = header.nextElementSibling;
 
-      // Remove any previous event listeners
+      // Remove previous event listeners
       const newHeader = header.cloneNode(true);
       header.parentNode.replaceChild(newHeader, header);
 
@@ -767,29 +865,63 @@
         newHeader.addEventListener("click", function () {
           const isActive = this.classList.contains("active");
 
-          // Close all panels
           document.querySelectorAll(".accordion-header").forEach(h => {
             h.classList.remove("active");
             h.nextElementSibling.style.maxHeight = null;
           });
 
-          // Toggle current panel
           if (!isActive) {
             this.classList.add("active");
             panel.style.maxHeight = panel.scrollHeight + "px";
           }
         });
       } else {
-        // Ensure panels are always open on larger screens
         panel.style.maxHeight = "none";
       }
     });
   }
 
-  window.addEventListener("DOMContentLoaded", setupAccordion);
-  window.addEventListener("resize", setupAccordion);
-</script>
+  function setupAccordion2() {
+    const isMobile = window.innerWidth <= 600;
+    const headers = document.querySelectorAll(".accordion-header2");
 
+    headers.forEach(header => {
+      const panel = header.nextElementSibling;
+
+      // Remove previous event listeners
+      const newHeader = header.cloneNode(true);
+      header.parentNode.replaceChild(newHeader, header);
+
+      if (isMobile) {
+        newHeader.addEventListener("click", function () {
+          const isActive = this.classList.contains("active");
+
+          document.querySelectorAll(".accordion-header2").forEach(h => {
+            h.classList.remove("active");
+            h.nextElementSibling.style.maxHeight = null;
+          });
+
+          if (!isActive) {
+            this.classList.add("active");
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      } else {
+        panel.style.maxHeight = "none";
+      }
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    setupAccordion();
+    setupAccordion2();
+  });
+
+  window.addEventListener("resize", () => {
+    setupAccordion();
+    setupAccordion2();
+  });
+</script>
 
 
 </body>
