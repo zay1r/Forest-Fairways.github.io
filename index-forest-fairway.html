@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <title>Charity Golf Tournament</title>
   <style>
     /* Forest & Fairway Color Palette */
@@ -282,6 +284,17 @@
       gap: 2rem;
     }
 
+    @media (max-width: 1400px) {
+    #preview_inline_popup_button {
+    position: static; /* Removes absolute positioning */
+    margin: 16px auto; /* Centers the button horizontally */
+    display: block; /* Ensures it takes up its own line */
+    width: 100%; /* Optional: make it full width */
+    max-width: 250px; /* Optional: limit max width */
+    font-size: 18px; /* Slightly smaller font for small screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+    }
     @media (max-width: 900px) {
   .team-grid {
     display: grid;
@@ -306,6 +319,17 @@
     .content hr {
       width: 45%;
     }
+
+    #preview_inline_popup_button {
+    position: static; /* Removes absolute positioning */
+    margin: 16px auto; /* Centers the button horizontally */
+    display: block; /* Ensures it takes up its own line */
+    width: 100%; /* Optional: make it full width */
+    max-width: 250px; /* Optional: limit max width */
+    font-size: 18px; /* Slightly smaller font for small screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -519,7 +543,7 @@
 <body>
 
   <header>
-    <h1>Forest & Fairway Charity Scramble</h1>
+    <h1>Forest & Fairways Charity Scramble</h1>
     <script type="text/javascript" defer="" src="https://donorbox.org/install-popup-button.js" id="donorbox-popup-button-installer">    
     </script>
     <a class="dbox-donation-button" id="preview_inline_popup_button" href="https://donorbox.org/forest-and-fairways?">
@@ -846,7 +870,15 @@
   </section>
 
   <footer>
-    &copy; 2025 Forest & Fairway Golf Tournament. All rights reserved.
+    &copy; 2025 Forest & Fairways Golf Tournament. All rights reserved.
+    <br>
+    <p style="margin: 0.5rem 0;">
+    <i class="fas fa-phone" style="margin-right: 8px;"></i>
+    <a href="tel:5198190270" style="color: white; text-decoration: underline;">519-819-0270</a>
+    &nbsp;&nbsp;
+    <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i>
+    <a href="mailto:isaiahwarner96@gmail.com" style="color: white; text-decoration: underline;">isaiahwarner96@gmail.com</a>
+
   </footer>
 
 <script>
