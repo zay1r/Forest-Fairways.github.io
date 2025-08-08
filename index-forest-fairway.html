@@ -120,14 +120,62 @@
 
     .hero {
       background-color: var(--cream);
-      
       padding: 3rem 2rem;
       text-align: center;
     }
 
+    .hero-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Image takes 1/3, text takes 2/3 */
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
+  padding: 1rem;
+}
+
+
+.hero-image p {
+      color: var(--bark-brown);
+      font-size: 1.65rem;
+      line-height: 1.6;
+    }
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.hero-image{
+  border: 4px solid var(--forest-green);
+  border-radius: 10px;
+}
+
+.hero-text {
+  color: var(--bark-brown);
+  margin: 0 auto;
+  border: 4px solid var(--forest-green);
+  border-radius: 10px;
+}
+
+.hero-text img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.hero-text p {
+  font-size: 1.65rem;
+  line-height: 1.6;
+}
     .hero-header h2 {
-        color: var(--forest-green);
-        
+      color: var(--forest-green);
       font-size: 3rem;
       margin-bottom: 0.5rem;
       margin-top: 0.5rem;
@@ -136,12 +184,6 @@
       color: var(--cream);
       font-size: 2rem;
       margin-top: 1rem;
-    }
-    .hero p {
-      color: var(--bark-brown);
-      font-size: 1.65rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
     }
 
     .hero-header hr {
@@ -153,12 +195,6 @@
       margin-top:0;
     }
 
-    .hero {
-      background-color: var(--cream);
-      
-      padding: 3rem 2rem;
-      text-align: center;
-    }
 
     .content h2 {
         color: var(--bark-brown);
@@ -330,6 +366,19 @@
     padding: 10px 20px; /* Adjust padding for smaller screens */
   }
 
+  .hero-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    padding: 0 1rem;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -475,6 +524,18 @@
   .content-grid {
     grid-template-columns: 1fr;
   }
+  .hero-body {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    padding: 0 1rem;
+  }
 
 }
 
@@ -551,18 +612,34 @@
   </header>
 
   <section class="hero">
-    <div class="hero-header">
+    
+    <div class="hero-body">
+    <div class="hero-text">
+      <div class="hero-header">
     <h2>Swing for a Cause</h2>
     <hr>
     </div>
-    <img src="CC.jpg" alt="Canadian Club Logo" style="max-width: 200px; margin-top: 1rem;">
-    <p>Thank you and welcome to the Forest & Fairway Charity Scramble.
-    We’re thrilled to have you join us for a meaningful day of golf, generosity, and community spirit.
-    Every swing you take helps support the Windsor Food Bank and brings real relief to those in need.
-</p>
+    <p> Welcome to the Forest & Fairways Charity Scramble!
+        We’re thrilled to have you join us for a meaningful day of golf & generosity
+        Thank you for supporting the UHC Hub of Opportunities, 
+        the central hub for the Windsor Essex Food Bank Association.
+        Every donation helps make a real difference in our community.
+    </p>
+  <img src="UHC.png" alt="Unemployed Help Centre of windsor Logo" style="max-width: 200px; margin-top: 1rem; margin-bottom: 1rem;">
+</div>
     <!-- <a href="registrationpage.html" class="cta-button">Register Now</a> -->
-    <br>
-    <br>
+    <div class="hero-image">
+    <img src="CC.jpg" alt="Canadian Club Logo" style="max-width: 200px; margin-top: 1rem; margin-bottom: 1rem;">
+    <div class="hero-header">
+    <h2>Canadian Club</h2>
+    <hr>
+    </div>
+    <p>A huge thank you to Canadian Club, our main sponsor for the Forest & Fairways Charity Scramble! 
+      Their generous support helps drive our mission forward and ensures this event is one to remember. Thank you for standing with us in support of our community.
+      </p>
+    </div>
+    
+    </div>
     </section>
     <section class="hero2">
     <div class="content-grid">
