@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Golf Scramble Leaderboard</title>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Leaderboard</h1>
+  <pre id="board"></pre>
+
+  <script>
+    const socket = io('http://localhost:5000');
+
+    socket.on('leaderboardUpdate', data => {
+      document.getElementById('board').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
